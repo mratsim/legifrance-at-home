@@ -1,3 +1,9 @@
+# legifrance-at-home
+# Copyright (c) 2025-Present Mamy André-Ratsimbazafy
+# Licensed and distributed under either of
+#   * Apache v2 license (license terms in the root directory or at http://www.apache.org/licenses/LICENSE-2.0).
+# This file may not be copied, modified, or distributed except according to those terms.
+
 import json, time
 from datetime import timedelta, datetime
 from pathlib import Path

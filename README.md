@@ -48,10 +48,18 @@ dans le dossier `queries`
 ## Réglages avancés
 
 La recherche peut être accélérés par l'utilisation de carte graphique.
-Il faut alors changer `DEVICE = "cuda"` pour les GPUs Nvidia ou `DEVICE = "mps"` pour MacOS (non-testé). (voir la documentation PyTorch https://docs.pytorch.org/docs/stable/tensor_attributes.html#torch.device)
+Il faut alors changer `DEVICE = "cuda"` pour les GPUs Nvidia ou `DEVICE = "mps"` pour MacOS (non-testé). (voir la documentation PyTorch https://docs.pytorch.org/docs/stable/tensor_attributes.html#torch.device).
 
-L'import utilise les embeddings pré-vectorisés via [`BAAI/bge-m3`](https://huggingface.co/BAAI/bge-m3). Il est possible de choisir un nouvel embedding model lors de l'import pour améliorer la recherche sémantique
+L'import utilise les embeddings pré-vectorisés via [`BAAI/bge-m3`](https://huggingface.co/BAAI/bge-m3). Il est possible de choisir un nouvel embedding model lors de l'import pour améliorer la recherche sémantique.
 
 La recherche utilise le reranker [`jinaai/jina-reranker-v2-base-multilingual`](https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual) par défaut, qui est multilingue et rapide même sur CPU grâce à FlashAttention. Les rerankers disponibles sont listés sur https://lancedb.com/docs/integrations/reranking/, les rerankers sans clé d'API/inscription/paiement sont:
 - CrossEncoderReranker, Liste non-exhaustive https://www.sbert.net/docs/cross_encoder/pretrained_models.html#community-models
 - AnswerdotaiRerankers, https://github.com/AnswerDotAI/rerankers
+
+## License
+
+Licensed and distributed under
+
+- Apache License, Version 2.0, ([LICENSE](./LICENSE) or http://www.apache.org/licenses/LICENSE-2.0)
+
+This file may not be copied, modified, or distributed except according to those terms.
