@@ -1,0 +1,14 @@
+[project]
+name = "legifrance-search"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=4.4.1",
+    "einops>=0.8.1",
+    "lancedb>=0.25.3",
+    "pandas>=2.3.3",
+    "rich>=14.2.0",
+    "sentence-transformers>=5.1.2",
+]
