@@ -50,6 +50,10 @@ dans le dossier `queries`
 La recherche peut être accélérés par l'utilisation de carte graphique.
 Il faut alors changer `DEVICE = "cuda"` pour les GPUs Nvidia ou `DEVICE = "mps"` pour MacOS (non-testé). (voir la documentation PyTorch https://docs.pytorch.org/docs/stable/tensor_attributes.html#torch.device).
 
+La recherche peut être modifiée pour effectuer des recherches sur des phrases ou formulations précises.
+Voir l'aide: https://www.lancedb.com/docs/search/full-text-search/#phrase-vs-terms-queries
+Toutefois, il est fort possible que la recherche sémantique détecte déjà des formulations spécifiques.
+
 L'import utilise les embeddings pré-vectorisés via [`BAAI/bge-m3`](https://huggingface.co/BAAI/bge-m3). Il est possible de choisir un nouvel embedding model lors de l'import pour améliorer la recherche sémantique.
 
 La recherche utilise le reranker [`jinaai/jina-reranker-v2-base-multilingual`](https://huggingface.co/jinaai/jina-reranker-v2-base-multilingual) par défaut, qui est multilingue et rapide même sur CPU grâce à FlashAttention. Les rerankers disponibles sont listés sur https://lancedb.com/docs/integrations/reranking/, les rerankers sans clé d'API/inscription/paiement sont:
